@@ -42,3 +42,25 @@ const dossierPrincipal = {
   }
 
   afficherDossier();
+
+  let contenu = dossierPrincipal.contenu;
+
+  function afficherDossierIteratif(dossier) {
+    for (const element of dossier.contenu) {
+        console.log(element.nom);
+    }
+  }
+
+  afficherDossierIteratif(dossierPrincipal);
+
+  function afficherDossierRecursif(dossier) {
+    if (dossier.contenu === undefined) {
+        return;
+    }
+    for (const element of dossier.contenu) {
+        console.log(element.nom);
+        afficherDossierRecursif(element)
+    }
+  }
+
+  afficherDossierRecursif(dossierPrincipal);
