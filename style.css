@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.folder {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.folder-item {
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px 0;
+    position: relative;
+}
+
+.folder-item:before {
+    content: '📂';
+    margin-right: 10px;
+}
+
+.file-item:before {
+    content: '📄';
+    margin-right: 10px;
+}
+
+.folder-item:hover,
+.file-item:hover {
+    text-decoration: underline;
+}
+
+.folder ul {
+    margin: 5px 0;
+    padding-left: 20px;
+    border-left: 2px dashed #ccc;
+}
